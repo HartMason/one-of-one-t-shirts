@@ -3,7 +3,7 @@ import React from 'react'
 const Router = () => {
   return (
     <Routes>
-        <Route path ="/" element={ProtectedRoute component= {<Home/>}}
+        <Route path ="/" element={{<Home/>}}
     </Routes>
 
   )
