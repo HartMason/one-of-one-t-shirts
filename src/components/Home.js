@@ -1,13 +1,14 @@
 import React from "react";
-import "./Home.css"
-// import backGround from "../backGround.jpg"
-
+import "./Home.css";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
-    <div className="backgroundImage">
+    <div className="home">
+      <Navbar/>
       <h1>One of One T-Shirts</h1>
-      {/* <div className="background" style={{ backgroundImage: `url(${backGround})`}}></div> */}
+      <Footer/>
     </div>
   );
 };
