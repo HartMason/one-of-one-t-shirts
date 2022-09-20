@@ -5,7 +5,7 @@ import "./Home.css"
 
 const Home = () => {
   return (
-    <div>
+    <div className="backgroundImage">
       <h1>One of One T-Shirts</h1>
       {/* <div className="background" style={{ backgroundImage: `url(${backGround})`}}></div> */}
     </div>
