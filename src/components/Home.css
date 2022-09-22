@@ -17,3 +17,10 @@ p {
     font-size: 100px;
     color: white;
 }
+
+.onSaleTShirt {
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+  
+}
