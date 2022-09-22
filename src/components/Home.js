@@ -5,10 +5,10 @@ import Navbar from "./Navbar";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="container">
       <Navbar />
       <h1>One of One T-Shirts</h1>
-      <Footer />
+      
     </div>
   );
 };
