@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.css";
 import tShirtCat from "../image/tShirtCat.jpg";
 
+
+
 const Home = () => {
   return (
     <div className="container">

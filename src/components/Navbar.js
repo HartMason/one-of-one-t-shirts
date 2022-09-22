@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+
 const pages = ['About', 'T-Shirts', 'Blog'];
 const settings = ['About', 'T-Shirts', 'Logos'];
 
@@ -55,7 +56,7 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            ONE OF ONE TSHIRTS
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

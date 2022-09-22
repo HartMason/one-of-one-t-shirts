@@ -1,0 +1,12 @@
+.onSaleTShirt {
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.shirtsContainer {
+    background-image: url("aboutBackground.jpg");
+}

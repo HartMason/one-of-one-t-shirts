@@ -1,27 +1,30 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import backGround from "./image/backGround.jpg"
+import backGround from "./image/backGround.jpg";
 
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
-
+import ButtonAppBar from "./components/Navigation";
 
 function App() {
   return (
-    <div className="backgroundImage" style={{ backgroundImage: `url(${backGround})`,
-    position: 'fixed',
-    minWidth: '100%',
-    // backgroundSize: 'contain',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    minHeight: '100%'
-  }}>
+    <div
+      className="container"
+      style={{
+        backgroundImage: `url(${backGround})`,
+        position: "fixed",
+        minWidth: "100%",
+        backgroundSize: "contain",
+        // backgroundSize: 'cover',
+        backgroundRepeat: "no-repeat",
+        minHeight: "100%",
+      }}
+    >
       <BrowserRouter>
-      <Navbar />
+        <ButtonAppBar />
         <Router />
 
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
