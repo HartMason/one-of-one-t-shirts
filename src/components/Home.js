@@ -1,12 +1,23 @@
 import React from "react";
 import "./Home.css";
 import tShirtCat from "../image/tShirtCat.jpg";
+import backGround from "../image/backGround.jpg";
+import Footer from "./Footer";
 
 
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="homeContainer"
+    style={{
+      backgroundImage: `url(${backGround})`,
+      position: "fixed",
+      minWidth: "100%",
+      backgroundSize: "contain",
+      // backgroundSize: 'cover',
+      backgroundRepeat: "no-repeat",
+      minHeight: "100%",
+    }}>
       <h1 className="title">One of One T-Shirts</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -36,6 +47,7 @@ const Home = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <Footer />
     </div>
   );
 };
