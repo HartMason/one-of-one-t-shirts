@@ -1,22 +1,34 @@
 import React from "react";
 import tShirtCat from "../image/tShirtCat.jpg";
-import aboutBackground from "../image/aboutBackground.jpg";
+import nightSky from "../image/nightSky.jpg";
 import Footer from "./Footer";
+import tshirtCares from "../image/tshirtCares.jpg"
 
 const Shirts = () => {
   return (
     <div className="shirtsContainer"
     style={{
-      backgroundImage: `url(${aboutBackground})`,
+      backgroundImage: `url(${nightSky})`,
       position: "fixed",
       minWidth: "100%",
       backgroundSize: "contain",
-      // backgroundSize: 'cover',
+      backgroundSize: 'cover',
       backgroundRepeat: "no-repeat",
       minHeight: "100%",
     }}
     >
+      <h1>T-SHIRTS</h1>
+      <div className="shirtDisplay">
       <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+      <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+      <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+      
+      </div>
+      <div className="shirtDescription">
+      <h1>Cat Shirt: Original</h1>
+      <h1>Cat Shirt: Original</h1>
+      <h1>Cat Shirt: Original</h1>
+      </div>
       <Footer />
     </div>
   );

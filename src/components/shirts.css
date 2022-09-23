@@ -10,3 +10,11 @@
 .shirtsContainer {
     background-image: url("aboutBackground.jpg");
 }
+
+.womanShirt {
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+    display: block;
+ 
+}

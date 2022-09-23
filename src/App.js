@@ -1,22 +1,14 @@
 import "./App.css";
-
-
-
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import ButtonAppBar from "./components/Navigation";
 
 function App() {
   return (
-    <div
-      className="container"
-      
-    >
+    <div className="container">
       <BrowserRouter>
         <ButtonAppBar />
         <Router />
-
-        
       </BrowserRouter>
     </div>
   );

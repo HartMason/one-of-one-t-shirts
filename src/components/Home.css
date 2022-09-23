@@ -26,3 +26,12 @@ p {
     margin-left: auto;
     margin-right: auto;  
 }
+
+.shirtDisplay {
+    display: flex;
+}
+
+.shirtDescription {
+    justify-content: space-around;
+    display: flex;
+}

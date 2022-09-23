@@ -25,9 +25,11 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
             ONE OF ONE TSHIRTS
           </Typography>
+          <Button component={Link} to={"/"}color="inherit">HOME</Button>
           <Button component={Link} to={"/about"}color="inherit">ABOUT</Button>
           <Button component={Link} to={"/shirts"}color="inherit">SHIRTS</Button>
           <Button component={Link} to={"/icons"}color="inherit">Icons</Button>
+          <Button component={Link} to={"/displayShirt"}color="inherit">Chosen Shirt</Button>
         </Toolbar>
       </AppBar>
     </Box>
