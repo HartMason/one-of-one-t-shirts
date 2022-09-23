@@ -5,8 +5,8 @@ import './DisplayShirt.css'
 const DisplayShirt = () => {
   return (
 
-    <div>
-        <body className='displayShirt'>
+    <div className='displayShirt'>
+        <body >
         <h2>Cat Shirt</h2>
         </body>
         <Footer/>

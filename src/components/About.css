@@ -7,3 +7,8 @@ p {
 .aboutContainer {
     overflow: scroll;
 }
+
+.screenPrinting {
+    height: 400px;
+    width: auto;
+}
