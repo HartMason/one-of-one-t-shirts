@@ -11,12 +11,12 @@ const Home = () => {
     <div className="homeContainer"
     style={{
       backgroundImage: `url(${backGround})`,
-      position: "fixed",
+      // position: "fixed",
       minWidth: "100%",
       backgroundSize: "contain",
       // backgroundSize: 'cover',
       backgroundRepeat: "no-repeat",
-      minHeight: "100%",
+      // minHeight: "100%",
     }}>
       <h1 className="title">One of One T-Shirts</h1>
       <p>
