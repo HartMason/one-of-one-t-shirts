@@ -1,20 +1,38 @@
-.onSaleTShirt {
-    background-size: cover;
-    height: 100%;
-    width: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;  
-}
-
 .shirtsContainer {
-    background-image: url("aboutBackground.jpg");
+    /* background-image: url("aboutBackground.jpg"); */
+    /* height: 300px; */
 }
 
-.womanShirt {
-    background-size: cover;
-    height: 100%;
-    width: 400px;
-    display: block;
+.shirtDisplay {
+    /* justify-content: space-between; */
+    /* width: 100%; */
+    height: 400px;
+    display: flex;
+}
+
+
+.onSaleTShirt {
+    max-height: 400px;
+    max-width: 100%;
+    /* max-width: 100%; */
+    
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+
+.cares {
+    max-height: 400px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;   
+    /* display: block; */
  
+}
+
+.pug {
+    max-height: 400px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;   
 }

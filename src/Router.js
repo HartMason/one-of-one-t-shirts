@@ -5,6 +5,8 @@ import About from "./components/About";
 import Icons from "./components/Icons";
 import Shirts from "./components/Shirts";
 import DisplayShirt from "./components/DisplayShirt";
+import ProtectedRoutes from "./components/ProtectedRoutes"
+
 
 const Router = () => {
   return (

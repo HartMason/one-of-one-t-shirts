@@ -3,6 +3,8 @@ import "./Home.css";
 import tShirtCat from "../image/tShirtCat.jpg";
 import backGround from "../image/backGround.jpg";
 import Footer from "./Footer";
+import Login from "../containers/Login";
+import TransitionsModal from "./TransitionsModal";
 
 
 
@@ -18,6 +20,8 @@ const Home = () => {
       backgroundRepeat: "no-repeat",
       // minHeight: "100%",
     }}>
+      
+     
       <h1 className="title">One of One T-Shirts</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

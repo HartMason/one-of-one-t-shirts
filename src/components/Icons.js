@@ -10,7 +10,7 @@ const Icons = () => {
       // position: "fixed",
       minWidth: "100%",
       backgroundSize: "contain",
-      backgroundSize: 'cover',
+      // backgroundSize: 'cover',
       backgroundRepeat: "no-repeat",
       // minHeight: "100%",
     }}>

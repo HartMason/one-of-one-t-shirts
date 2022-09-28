@@ -1,16 +1,19 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
 import Router from "./Router";
-import ButtonAppBar from "./components/Navigation";
+import Navigation from "./containers/Navigation";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
-    <div className="container">
+    <Provider store={store}>
       <BrowserRouter>
-        <ButtonAppBar />
-        <Router />
+      <Navigation />
+      <Router />
       </BrowserRouter>
-    </div>
+    </Provider>
   );
 }
 
