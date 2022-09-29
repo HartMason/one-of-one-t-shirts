@@ -3,8 +3,8 @@ import "./Home.css";
 import tShirtCat from "../image/tShirtCat.jpg";
 import backGround from "../image/backGround.jpg";
 import Footer from "./Footer";
-import Login from "../containers/Login";
-import TransitionsModal from "./TransitionsModal";
+
+
 
 
 

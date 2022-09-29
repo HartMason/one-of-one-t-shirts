@@ -5,6 +5,32 @@ export const login = (user) => {
 export const logOut = () => {
     return { type: "LOGOUT" }
 }
+const fetchLoginAction = (userArray) => { //userArray has two items, user object, and JWTString
+    return {
+      type: "SET_LOGIN",
+      payload: userArray
+    }
+  }
+
+export const fetchLogin = (user) => {
+    return(dispatch) => { //prev http://localhost:9000/teacher-login https://home-gradebook.herokuapp.com/teacher-login
+      fetch('http://localhost/4001/users/login', {
+        method: 'POST',
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify(user),
+      })
+      .then(res=>res.text())
+      .then(response => {
+        console.log("fetchLogin response",response);
+        // if(response === "Bad Request" || response === "Internal Server Error"){
+        //   return;
+        // };
+        dispatch(fetchLoginAction([user, response]))
+      })
+    }
+  }
 
 
 // export const addBusiness = (business) => {

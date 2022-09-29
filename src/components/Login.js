@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import CustomStack from './CustomStack'
 import CustomCard from './CustomCard'
@@ -8,19 +8,40 @@ import { useNavigate } from 'react-router-dom'
 
 
 
+
 function Login(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const userNameInput = useRef("");
   const passwordInput = useRef("");
 
-  const handleSubmit = () => {
-    
+
+  const handleSubmit = async () => {
+    const userLogin = { user_email: userNameInput.current.value, user_password: passwordInput.current.value }
+    console.log(userLogin, "USER LOGIN INFOOOOOOOOOO")
+    props.fetchLogin(userLogin)
+   
+    // fetch('http://localhost/4001/users/login', {
+    //   method: 'POST',
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8"
+    //   },
+    //   body: JSON.stringify(userLogin),
+    // })
+    // .then(res=>res.json())
+    // .then(response => {
+    //   console.log("fetchLogin response",response);
+    //   // if(response === "Bad Request" || response === "Internal Server Error"){
+    //   //   return;
+    //   // };
+    //   // dispatch(fetchLoginAction([user, response, 'teacher']))
+    // })
+
     dispatch(props.login({
       username: userNameInput.current.value,
       password: passwordInput.current.value
     }))
-    navigate("/Listings")
+    // navigate("/Listings")
   }
   
 

@@ -46,7 +46,7 @@ export default function Navigation(props) {
             </Button>
           ) : (
             // <Button component={Link} to={"/"} color="inherit">
-            <TransitionsModal/>
+            <TransitionsModal />
             // </Button>
           )}
           <Button component={Link} to={"/"} color="inherit">
@@ -58,9 +58,7 @@ export default function Navigation(props) {
           <Button component={Link} to={"/shirts"} color="inherit">
             SHIRTS
           </Button>
-          <Button component={Link} to={"/icons"} color="inherit">
-            Icons
-          </Button>
+
           <Button component={Link} to={"/displayShirt"} color="inherit">
             Chosen Shirt
           </Button>
