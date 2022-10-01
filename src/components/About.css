@@ -1,15 +1,38 @@
+.aboutContainer {
+    background-image: url("../image/backGround.jpg");
+    max-width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0%;
+    margin-top: 0%;
+    border-top: 0ch;
+}
+
+.aboutTitle {
+    font-size: 100px;
+    margin-top: 0;
+}
+
 p {
     font-family: 'Qwitcher Grypen', cursive;
     font-size: 30px;
-    color: black;
+    color: white;
 }
 
-.aboutContainer {
-    
+.title {
+    font-size: 100px;
+    margin: 0;
 }
+
+
 
 .screenPrinting {
     height: 400px;
     width: auto;
-    background-position: center;
+    justify-content: center;
+    align-items: center;
+    
 }

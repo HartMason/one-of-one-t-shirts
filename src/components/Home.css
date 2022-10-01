@@ -24,14 +24,14 @@
 
 .title {
     font-family: 'Qwitcher Grypen', cursive;
-    font-size: 100px;
     color: white;
     text-align: center;
+    font-size: 100px;
 }
 
 p {
     font-family: 'Qwitcher Grypen', cursive;
-    font-size: 100px;
+    font-size: 30px;
     color: white;
 }
 

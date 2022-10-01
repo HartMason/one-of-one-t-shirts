@@ -27,6 +27,22 @@ const user = (state = null, action) => {
   }
 };
 
+
+export default combineReducers({ user });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const businesses = (state = [], action) => {
 //   switch (action.type) {
 //     case "ADD_BUSINESS":
@@ -47,5 +63,3 @@ const user = (state = null, action) => {
 //       return state;
 //   }
 // };
-
-export default combineReducers({ user });
