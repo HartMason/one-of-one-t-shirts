@@ -18,10 +18,8 @@ const user = (state = null, action) => {
       document.cookie = cookie.serialize("loggedIn", "true", { maxAge: 7200 });
       console.log("set login action payload", action.payload);
       let copyState = {
-        email: action.payload[0].email,
+        email: action.payload[0].user_email,
         userJWT: action.payload[1],
-        role: action.payload[2],
-        userBool: true,
       };
       return copyState;
     default:

@@ -5,10 +5,11 @@ p {
 }
 
 .aboutContainer {
-    overflow: auto;
+    
 }
 
 .screenPrinting {
     height: 400px;
     width: auto;
+    background-position: center;
 }

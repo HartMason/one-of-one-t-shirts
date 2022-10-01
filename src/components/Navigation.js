@@ -26,7 +26,7 @@ export default function Navigation(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "#ccdee2" }}>
+      <AppBar position="static" margin-bottom="0" border="0" style={{ backgroundColor: "#ccdee2" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -57,10 +57,6 @@ export default function Navigation(props) {
           </Button>
           <Button component={Link} to={"/shirts"} color="inherit">
             SHIRTS
-          </Button>
-
-          <Button component={Link} to={"/displayShirt"} color="inherit">
-            Chosen Shirt
           </Button>
         </Toolbar>
       </AppBar>

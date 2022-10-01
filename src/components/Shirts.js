@@ -1,10 +1,10 @@
 import React, { useState, useEffect }from "react";
-import tShirtCat from "../image/tShirtCat.jpg";
 import nightSky from "../image/nightSky.jpg";
-import Footer from "./Footer";
+import tShirtCat from "../image/tShirtCat.jpg";
 import tshirtCares from "../image/tshirtCares.jpg";
 import pug from "../image/pug.webp";
 import "./shirts.css";
+import { Link } from "react-router-dom";
 
 
 const Shirts = () => {
@@ -37,18 +37,19 @@ const Shirts = () => {
     >
       <h1>T-SHIRTS</h1>
       <div className="shirtDisplay">
+        <Link to="/displayShirts">
         <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+        </Link>
         <img className="cares" src={tshirtCares} alt="cares" />
         <img className="pug" src={pug} alt="horse" />
       </div>
       <div className="shirtDescription">
         <ul>
-          {shirtId.map((item, i) => {
-            return <li key={i}>{item.shirt_id}</li> 
+          {shirtId.map((shirt, i) => {
+            return <li key={i}>{shirt.shirt_name}</li> 
           })}
         </ul>
       </div>
-      <Footer />
     </div>
   );
 };

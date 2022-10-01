@@ -5,6 +5,7 @@ import Navigation from "./containers/Navigation";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter } from "react-router-dom"
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
       <Navigation />
       <Router />
+      <Footer/>
       </BrowserRouter>
     </Provider>
   );
