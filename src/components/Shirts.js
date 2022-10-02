@@ -4,19 +4,18 @@ import tshirtCares from "../image/tshirtCares.jpg";
 import pug from "../image/pug.webp";
 import "./shirts.css";
 import { Link } from "react-router-dom";
+import nightsky from "../image/NightSky.jpg";
 
 const Shirts = () => {
   const [shirts, setShirts] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:4001/shirts/')
-      .then(res => {
-        return res.json()
-    })
-    .then(shirts => setShirts())
-  }, [])
-
-
+    fetch("http://localhost:4001/shirts/")
+      .then((res) => {
+        return res.json();
+      })
+      .then((shirts) => setShirts(shirts));
+  }, []);
 
   // const getData = () => {
   //   fetch("http://localhost:4001/shirts/")
@@ -31,7 +30,12 @@ const Shirts = () => {
   // }, []);
 
   return (
-    <div className="shirtsContainer">
+    <div
+      className="shirtsContainer"
+      style={{
+        backgroundImage: url(`${nightsky}`),
+      }}
+    >
       <h1 className="tshirtHeader">T-SHIRTS</h1>
       <div className="shirtDisplay">
         <Link to="/displayShirts">
@@ -44,7 +48,6 @@ const Shirts = () => {
           <img className="pug" src={pug} alt="horse" />
         </Link>
       </div>
-      
     </div>
   );
 };
