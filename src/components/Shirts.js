@@ -6,14 +6,14 @@ import "./shirts.css";
 import { Link } from "react-router-dom";
 
 const Shirts = () => {
-  const [shirts, setShirts] = useState([]);
+  const [shirts, setShirts] = useState("");
 
   useEffect(() => {
     fetch('http://localhost:4001/shirts/')
       .then(res => {
-        return response.json()
+        return res.json()
     })
-    .then(shirt_name => setShirts(Shirts))
+    .then(shirts => setShirts())
   }, [])
 
 
@@ -44,10 +44,7 @@ const Shirts = () => {
           <img className="pug" src={pug} alt="horse" />
         </Link>
       </div>
-      <div className="shirtDescription">{setShirts.map((shirt, index) => {
-        return <li key={index}>{shirt.shirt_name}</li>
-      })}
-      </div>
+      
     </div>
   );
 };

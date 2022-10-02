@@ -31,17 +31,17 @@ export default function Navigation(props) {
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="primary"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography color="primary" variant="h6" component="div" sx={{ flexGrow: 1 }}>
             ONE OF ONE TSHIRTS
           </Typography>
           {user.online === true ? (
-            <Button onClick={handleClick} color="inherit">
+            <Button onClick={handleClick} color="primary">
               Logout
             </Button>
           ) : (
@@ -49,13 +49,13 @@ export default function Navigation(props) {
             <TransitionsModal />
             // </Button>
           )}
-          <Button component={Link} to={"/"} color="inherit">
+          <Button component={Link} to={"/"} color="primary" font-size="bold">
             HOME
           </Button>
-          <Button component={Link} to={"/about"} color="inherit">
+          <Button component={Link} to={"/about"} color="primary">
             ABOUT
           </Button>
-          <Button component={Link} to={"/shirts"} color="inherit">
+          <Button component={Link} to={"/shirts"} color="primary">
             SHIRTS
           </Button>
         </Toolbar>
