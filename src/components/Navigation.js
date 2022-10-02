@@ -10,10 +10,12 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import TransitionsModal from "./TransitionsModal";
+import { fontFamily } from "@mui/system";
 
 export default function Navigation(props) {
   const dispatch = useDispatch();
   const { user } = props;
+
 
   const handleClick = () => {
     console.log("logout");
@@ -37,7 +39,7 @@ export default function Navigation(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography color="primary" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography color="primary" variant="h6"  component="div" sx={{ flexGrow: 1 }}>
             ONE OF ONE TSHIRTS
           </Typography>
           {user.online === true ? (
