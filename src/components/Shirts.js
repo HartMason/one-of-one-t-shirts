@@ -32,9 +32,9 @@ const Shirts = () => {
   return (
     <div
       className="shirtsContainer"
-      style={{
-        backgroundImage: url(`${nightsky}`),
-      }}
+      // style={{
+      //   // backgroundImage: url(`${nightsky}`),
+      // }}
     >
       <h1 className="tshirtHeader">T-SHIRTS</h1>
       <div className="shirtDisplay">
