@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import nightSky from "../image/nightSky.jpg";
 import tShirtCat from "../image/tShirtCat.jpg";
 import tshirtCares from "../image/tshirtCares.jpg";
 import pug from "../image/pug.webp";
@@ -7,19 +6,29 @@ import "./shirts.css";
 import { Link } from "react-router-dom";
 
 const Shirts = () => {
-  const [shirtId, fetchShirtId] = useState([]);
+  const [shirts, setShirts] = useState([]);
 
-  const getData = () => {
-    fetch("http://localhost:4001/shirts/")
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        fetchShirtId(res);
-      });
-  };
   useEffect(() => {
-    getData();
-  }, []);
+    fetch('http://localhost:4001/shirts/')
+      .then(res => {
+        return response.json()
+    })
+    .then(shirt_name => setShirts(Shirts))
+  }, [])
+
+
+
+  // const getData = () => {
+  //   fetch("http://localhost:4001/shirts/")
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       console.log(res);
+  //       fetchShirtId(res);
+  //     });
+  // };
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <div className="shirtsContainer">
@@ -35,12 +44,9 @@ const Shirts = () => {
           <img className="pug" src={pug} alt="horse" />
         </Link>
       </div>
-      <div className="shirtDescription">
-        <ul>
-          {shirtId.map((shirt, i) => {
-            return <li key={i}>{shirt.shirt_name}</li>;
-          })}
-        </ul>
+      <div className="shirtDescription">{setShirts.map((shirt, index) => {
+        return <li key={index}>{shirt.shirt_name}</li>
+      })}
       </div>
     </div>
   );

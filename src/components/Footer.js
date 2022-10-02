@@ -6,7 +6,7 @@ import twitter from '../image/twitter.svg'
 const Footer = () => {
   return (
     <div className='footer'>
-        <h1>FOOTER</h1>
+        <h1 className='footerHeader'>FOOTER</h1>
         <image src={youTube}></image>
         <image src={twitter}></image>
     </div>
