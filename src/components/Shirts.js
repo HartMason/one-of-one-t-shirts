@@ -4,7 +4,7 @@ import tshirtCares from "../image/tshirtCares.jpg";
 import pug from "../image/pug.webp";
 import "./shirts.css";
 import { Link } from "react-router-dom";
-import nightsky from "../image/NightSky.jpg";
+// import nightsky from "../image/NightSky.jpg";
 
 const Shirts = () => {
   const [shirts, setShirts] = useState("");
