@@ -21,9 +21,9 @@ app.use("/shirts", shirtsRouter);
 app.use("/orderDetails", orderDetailsRouter);
 // app.use("/auth", authRouter)
 
-app.get("/", (req, res) => {
-  res.send("Welcome to our server!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Welcome to our server!");
+// });
 
 app.use(express.static("public"));
 
