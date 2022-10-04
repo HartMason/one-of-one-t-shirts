@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
-const shirtsRouter = require("./routes/shirts");
-const usersRouter = require("./routes/user");
-const orderDetailsRouter = require("./routes/orderDetails");
+const shirtsRouter = require("../src/server/routes/shirts");
+const usersRouter = require("../src/server/routes/user");
+const orderDetailsRouter = require("../src/server/routes/orderDetails");
 const port = process.env.PORT || 4001;
 const cors = require("cors");
 const bodyParser = require("body-parser");
