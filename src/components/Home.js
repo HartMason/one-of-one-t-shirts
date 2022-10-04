@@ -1,10 +1,22 @@
 import React from "react";
 import "./Home.css";
 import tShirtCat from "../image/tShirtCat.jpg";
+import backGround from "../image/backGround.jpg"
 
 const Home = () => {
   return (
-    <div className="backgroundImage">
+    <div style={{
+      backgroundImage: `url(${backGround})`,
+      maxWidth: "100%",
+      height: "100%",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      // margin: "0%",
+     
+
+
+    }}>
       <h1 className="title">One of One T-Shirts</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

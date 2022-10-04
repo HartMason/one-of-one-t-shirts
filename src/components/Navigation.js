@@ -51,7 +51,7 @@ export default function Navigation(props) {
             <TransitionsModal />
             // </Button>
           )}
-          <Button component={Link} to={"/"} color="primary" font-size="bold">
+          <Button component={Link} to={"/"} color="primary">
             HOME
           </Button>
           <Button component={Link} to={"/about"} color="primary">

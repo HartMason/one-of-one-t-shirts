@@ -1,40 +1,24 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import tShirtCat from "../image/tShirtCat.jpg";
 import tshirtCares from "../image/tshirtCares.jpg";
 import pug from "../image/pug.webp";
 import "./shirts.css";
 import { Link } from "react-router-dom";
+import midWest from "../image/midWest.jpg";
 // import nightsky from "../image/NightSky.jpg";
 
 const Shirts = () => {
-  const [shirts, setShirts] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:4001/shirts/")
-      .then((res) => {
-        return res.json();
-      })
-      .then((shirts) => setShirts(shirts));
-  }, []);
-
-  // const getData = () => {
-  //   fetch("http://localhost:4001/shirts/")
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res);
-  //       fetchShirtId(res);
-  //     });
-  // };
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
   return (
     <div
-      className="shirtsContainer"
-      // style={{
-      //   // backgroundImage: url(`${nightsky}`),
-      // }}
+      style={{
+        backgroundImage: `url(${midWest})`,
+        maxWidth: "100%",
+        height: "1000px",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        margin: "0%",
+      }}
     >
       <h1 className="tshirtHeader">T-SHIRTS</h1>
       <div className="shirtDisplay">
