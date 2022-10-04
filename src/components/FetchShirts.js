@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const FetchShirts = () => {
   const [shirts, setShirts] = useState([]);
   const fetchData = async () => {
-    return await fetch("http://localhost:4001/shirts/")
+    return await fetch("/shirts/")
       .then((response) => response.json())
       .then((data) => {
         console.log("DATA DATA", data);
