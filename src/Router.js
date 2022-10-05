@@ -5,7 +5,7 @@ import About from "./components/About";
 
 import Shirts from "./components/Shirts";
 import DisplayShirt from "./components/chosenShirt/DisplayShirt";
-import ProtectedRoutes from "./components/ProtectedRoutes";
+
 
 const Router = () => {
   return (
