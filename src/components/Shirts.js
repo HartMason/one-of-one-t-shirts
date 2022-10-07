@@ -49,13 +49,13 @@ const Shirts = () => {
           </Link>
         </div>
 
-      <ul>
+      {/* <ul>
         {shirts.map((shirt) => (
           <li>
             <Shirt shirt={shirt} />
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

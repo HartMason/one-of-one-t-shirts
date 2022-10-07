@@ -1,10 +1,12 @@
 import * as React from "react";
+import axios from "axios";
 import { CssVarsProvider, useColorScheme } from "@mui/joy/styles";
 import Sheet from "@mui/joy/Sheet";
 import Typography from "@mui/joy/Typography";
 import TextField from "@mui/joy/TextField";
 import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
+import { useState } from "react";
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -39,28 +41,48 @@ const ModeToggle = () => {
 };
 
 export default function LoginForm(props) {
+  const [input, setInput] = useState({ email: "", password: "" });
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const userNameInput = useRef("");
-  const passwordInput = useRef("");
 
-  const handleSubmit = async () => {
-    const userLogin = {
-      user_email: userNameInput.current.value,
-      user_password: passwordInput.current.value,
-    };
-    console.log(userLogin, "USER LOGIN INFOOOOOOOOOO");
-    props.fetchLogin(userLogin);
-
-    dispatch(
-      props.login({
-        username: userNameInput.current.value,
-        password: passwordInput.current.value,
-      })
-    );
-    // navigate("/Listings")
+  const handleChange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async () => {
+    try {
+      const body = { user_email: input.email, user_password: input.password };
+      const { data } = await axios.post(
+        "https://one-of-one-t-shirts.vercel.app/users/login",
+        body
+      );
+      console.log("data", data);
+      props.handleClose();
+    } catch (error) {
+      console.error("error handling login", error);
+    }
+  };
+
+  // const dispatch = useDispatch();
+  // const userNameInput = useRef("");
+  // const passwordInput = useRef("");
+
+  // const handleSubmit = async () => {
+  //   const userLogin = {
+  //     user_email: userNameInput.current.value,
+  //     user_password: passwordInput.current.value,
+  //   };
+  //   console.log(userLogin, "USER LOGIN INFOOOOOOOOOO");
+  //   props.fetchLogin(userLogin);
+
+  //   dispatch(
+  //     props.login({
+  //       username: userNameInput.current.value,
+  //       password: passwordInput.current.value,
+  //     })
+  //   );
+  //   // navigate("/Listings")
+  // };
+  console.log("input", input);
   return (
     <CssVarsProvider>
       <main>
@@ -87,7 +109,9 @@ export default function LoginForm(props) {
             <Typography level="body2">Sign in to continue.</Typography>
           </div>
           <TextField
-            inputref={userNameInput}
+            value={input.email}
+            onChange={handleChange}
+            // inputref={userNameInput}
             // html input attribute
             name="email"
             type="email"
@@ -96,13 +120,16 @@ export default function LoginForm(props) {
             label="Email"
           />
           <TextField
-            inputref={passwordInput}
+            value={input.password}
+            onChange={handleChange}
+            // inputref={passwordInput}
             name="password"
             type="password"
             placeholder="password"
             label="Password"
           />
           <Button
+            onClick={handleSubmit}
             sx={{
               mt: 1, // margin top
             }}
