@@ -15,7 +15,7 @@ import LoginForm from "./LoginForm";
 
 export default function Navigation(props) {
   const dispatch = useDispatch();
-  const [show, setShow] = React.useState(false);
+  // const [show, setShow] = React.useState(false);
   const { user } = props;
 
   const handleClick = () => {
