@@ -1,6 +1,6 @@
 export default {
     user: {
-        online: true,
+        online: false,
         email: null,
         userJWT: null
     }

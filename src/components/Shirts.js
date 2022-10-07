@@ -1,13 +1,24 @@
-// import React, { useState, useEffect } from "react";
-import tShirtCat from "../image/tShirtCat.jpg";
-import tshirtCares from "../image/tshirtCares.jpg";
-import pug from "../image/pug.webp";
 import "./shirts.css";
-import { Link } from "react-router-dom";
 import midWest from "../image/midWest.jpg";
-// import nightsky from "../image/NightSky.jpg";
+import React, { useEffect, useState } from "react";
+import Shirt from "./Shirt";
 
 const Shirts = () => {
+  const [shirts, setShirts] = useState([]);
+  const fetchData = async () => {
+    return await fetch("https://one-of-one-t-shirts.vercel.app/shirts/")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("DATA DATA", data);
+        setShirts(data);
+      })
+      .catch((error) => console.error("error fetching shirts", error));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div
       style={{
@@ -20,18 +31,27 @@ const Shirts = () => {
         margin: "0%",
       }}
     >
-      <h1 className="tshirtHeader">T-SHIRTS</h1>
-      <div className="shirtDisplay">
-        <Link to="/displayShirts">
-          <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
-        </Link>
-        <Link to="/displayShirts">
-          <img className="cares" src={tshirtCares} alt="cares" />
-        </Link>
-        <Link to="/displayshirts">
-          <img className="pug" src={pug} alt="horse" />
-        </Link>
-      </div>
+      {/* <div>
+        <h1 className="tshirtHeader">T-SHIRTS</h1>
+        <div className="shirtDisplay">
+          <Link to="/shirt">
+            <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+          </Link>
+          <Link to="/shirt">
+            <img className="cares" src={tshirtCares} alt="cares" />
+          </Link>
+          <Link to="/shirt">
+            <img className="pug" src={pug} alt="horse" />
+          </Link>
+        </div> */}
+
+      <ul>
+        {shirts.map((shirt) => (
+          <li>
+            <Shirt shirt={shirt} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
