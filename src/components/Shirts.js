@@ -2,6 +2,10 @@ import "./shirts.css";
 import midWest from "../image/midWest.jpg";
 import React, { useEffect, useState } from "react";
 import Shirt from "./Shirt";
+import { Link } from "react-router-dom";
+import tShirtCat from "../image/tShirtCat.jpg"
+import tshirtCares from "../image/tshirtCares.jpg"
+import pug from "../image/pug.webp"
 
 const Shirts = () => {
   const [shirts, setShirts] = useState([]);
@@ -29,9 +33,9 @@ const Shirts = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         margin: "0%",
-      }}
-    >
-      {/* <div>
+      }}>
+
+      
         <h1 className="tshirtHeader">T-SHIRTS</h1>
         <div className="shirtDisplay">
           <Link to="/shirt">
@@ -43,7 +47,7 @@ const Shirts = () => {
           <Link to="/shirt">
             <img className="pug" src={pug} alt="horse" />
           </Link>
-        </div> */}
+        </div>
 
       <ul>
         {shirts.map((shirt) => (
