@@ -4,16 +4,16 @@ import Router from "./Router";
 import Navigation from "./containers/Navigation";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <Navigation />
-      <Router />
-      <Footer/>
+        <Navigation />
+        <Router />
+        <Footer />
       </BrowserRouter>
     </Provider>
   );
