@@ -1,7 +1,7 @@
 export default {
-    user: {
-        online: true,
-        email: null,
-        userJWT: null
-    }
-}
+  user: {
+    online: false,
+    email: null,
+    userJWT: null,
+  },
+};
