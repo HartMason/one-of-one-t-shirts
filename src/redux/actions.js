@@ -14,7 +14,7 @@ const fetchLoginAction = (userArray) => {
 
 export const fetchLogin = (user) => {
   return (dispatch) => {
-    fetch("/users/login", {
+    fetch("https://one-of-one-t-shirts.vercel.app/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;",
