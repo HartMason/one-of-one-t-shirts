@@ -1,27 +1,26 @@
 import "./shirts.css";
 import midWest from "../image/midWest.jpg";
-import React, { useEffect, useState } from "react";
-import Shirt from "./Shirt";
+// import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import tShirtCat from "../image/tShirtCat.jpg"
 import tshirtCares from "../image/tshirtCares.jpg"
 import pug from "../image/pug.webp"
 
 const Shirts = () => {
-  const [shirts, setShirts] = useState([]);
-  const fetchData = async () => {
-    return await fetch("https://one-of-one-t-shirts.vercel.app/shirts/")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("DATA DATA", data);
-        setShirts(data);
-      })
-      .catch((error) => console.error("error fetching shirts", error));
-  };
+  // const [shirts, setShirts] = useState([]);
+  // const fetchData = async () => {
+  //   return await fetch("https://one-of-one-t-shirts.vercel.app/shirts/")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log("DATA DATA", data);
+  //       setShirts(data);
+  //     })
+  //     .catch((error) => console.error("error fetching shirts", error));
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   return (
     <div
@@ -36,16 +35,19 @@ const Shirts = () => {
       }}>
 
       
-        <h1 className="tshirtHeader">T-SHIRTS</h1>
+        <p className="tshirtHeader">T-SHIRTS</p>
         <div className="shirtDisplay">
-          <Link to="/shirt">
+          <Link to="/shirt" style={{textDecoration:"none"}}>
             <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+          <h3 className="catShirt">Cat Shirt</h3>
           </Link>
-          <Link to="/shirt">
+          <Link to="/shirt" style={{textDecoration:"none"}}>
             <img className="cares" src={tshirtCares} alt="cares" />
+          <h3 className="caresShirt">No One Cares Shirt</h3>
           </Link>
-          <Link to="/shirt">
+          <Link to="/shirt" style={{textDecoration:"none"}}>
             <img className="pug" src={pug} alt="horse" />
+          <h3 className="pugShirt">Pug Shirt</h3>
           </Link>
         </div>
 
