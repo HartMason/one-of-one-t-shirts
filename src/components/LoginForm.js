@@ -5,7 +5,7 @@ import Sheet from "@mui/joy/Sheet";
 import Typography from "@mui/joy/Typography";
 import TextField from "@mui/joy/TextField";
 import Button from "@mui/joy/Button";
-import Link from "@mui/joy/Link";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -137,7 +137,7 @@ export default function LoginForm(props) {
             Log in
           </Button>
           <Typography
-            endDecorator={<Link href="/signup">Sign up</Link>}
+            endDecorator={<Link path="/signup">Sign up</Link>}
             fontSize="sm"
             sx={{ alignSelf: "center" }}
           >
