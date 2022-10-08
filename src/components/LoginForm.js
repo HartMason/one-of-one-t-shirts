@@ -137,11 +137,11 @@ export default function LoginForm(props) {
             Log in
           </Button>
           <Typography
-            endDecorator={<Link path="/signup">Sign up</Link>}
             fontSize="sm"
             sx={{ alignSelf: "center" }}
-          >
+            >
             Don&apos;t have an account?
+            <Link to="/sign-up">Sign up</Link>
           </Typography>
         </Sheet>
       </main>
