@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Shirts from "./components/Shirts";
 import Shirt from "./components/Shirt";
+import SignUp from "./components/SignUp"
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/about" element={<About />} />
       <Route path="/shirt" element={<Shirt />} />
       <Route path="/shirts" element={<Shirts />} />
+      <Route path="/signup" element={<SignUp/>} />
     </Routes>
   );
 };

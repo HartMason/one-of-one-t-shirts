@@ -137,7 +137,7 @@ export default function LoginForm(props) {
             Log in
           </Button>
           <Typography
-            endDecorator={<Link href="/sign-up">Sign up</Link>}
+            endDecorator={<Link href="/signup">Sign up</Link>}
             fontSize="sm"
             sx={{ alignSelf: "center" }}
           >
