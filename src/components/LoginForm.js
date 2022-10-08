@@ -56,7 +56,7 @@ export default function LoginForm(props) {
         body
       );
       console.log("data", data);
-      props.handleClose();
+      props.handleClose() 
     } catch (error) {
       console.error("error handling login", error);
     }
@@ -137,7 +137,7 @@ export default function LoginForm(props) {
             Log in
           </Button>
           <Typography
-            endDecorator={<Link path="/signup">Sign up</Link>}
+            endDecorator={<Link href="/signup">Sign up</Link>}
             fontSize="sm"
             sx={{ alignSelf: "center" }}
           >
