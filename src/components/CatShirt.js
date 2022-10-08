@@ -8,7 +8,7 @@ const CatShirt = () => {
     <div className="bodyCatShirt">
       <img className="buyShirtCat" src={tShirtCat} alt="cat" />
       <p className="buyCat">CatShirt</p>
-      <h4>$20.00</h4>
+      <h4 className="catPrice">$20.00</h4>
     </div>
   );
 };
