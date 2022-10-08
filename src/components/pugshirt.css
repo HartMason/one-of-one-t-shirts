@@ -1,9 +1,9 @@
-.bodyCatShirt {
+.bodyPugShirt {
     height: 750px;
     display: flex;
 }
 
-.buyCat {
+.buyPug {
     display: flex;
     justify-content: center;
     margin-top: 200px;
@@ -14,7 +14,7 @@
    
   }
 
-.buyShirtCat {
+.buyShirtPug {
     height: 600px;
     margin-top: 70px;
     margin-left: 100px;

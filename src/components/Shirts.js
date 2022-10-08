@@ -41,11 +41,11 @@ const Shirts = () => {
             <img className="shirtCat" src={tShirtCat} alt="cat" />
           <h3 className="catShirt">Cat Shirt</h3>
           </Link>
-          <Link to="/shirt" style={{textDecoration:"none"}}>
+          <Link to="/cares-shirt" style={{textDecoration:"none"}}>
             <img className="cares" src={tshirtCares} alt="cares" />
           <h3 className="caresShirt">No One Cares Shirt</h3>
           </Link>
-          <Link to="/shirt" style={{textDecoration:"none"}}>
+          <Link to="/pug-shirt" style={{textDecoration:"none"}}>
             <img className="pug" src={pug} alt="horse" />
           <h3 className="pugShirt">Pug Shirt</h3>
           </Link>

@@ -6,6 +6,8 @@ import Shirts from "./components/Shirts";
 import Shirt from "./components/Shirt";
 import SignUp from "./components/SignUp"
 import CatShirt from "./components/CatShirt"
+import PugShirt from "./components/PugShirt"
+import CaresShirt from "./components/CaresShirt"
 
 const Router = () => {
   return (
@@ -16,6 +18,8 @@ const Router = () => {
       <Route path="/shirts" element={<Shirts />} />
       <Route path="/sign-up" element={<SignUp/>} />
       <Route path="/cat-shirt" element={<CatShirt/>} />
+      <Route path="/pug-shirt" element={<PugShirt/>} />
+      <Route path="/cares-shirt" element={<CaresShirt/>} />
     </Routes>
   );
 };
