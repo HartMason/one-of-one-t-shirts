@@ -37,8 +37,8 @@ const Shirts = () => {
       
         <p className="tshirtHeader">T-SHIRTS</p>
         <div className="shirtDisplay">
-          <Link to="/shirt" style={{textDecoration:"none"}}>
-            <img className="onSaleTShirt" src={tShirtCat} alt="horse" />
+          <Link to="/cat-shirt" style={{textDecoration:"none"}}>
+            <img className="shirtCat" src={tShirtCat} alt="cat" />
           <h3 className="catShirt">Cat Shirt</h3>
           </Link>
           <Link to="/shirt" style={{textDecoration:"none"}}>

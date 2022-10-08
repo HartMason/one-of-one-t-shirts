@@ -13,6 +13,7 @@
 .tshirtHeader {
   display: flex;
   font-size: 100px;
+  font-weight: 700;
   margin-top: 0;
   color: black;
   align-items: center;
@@ -20,7 +21,7 @@
   margin-bottom: 75px;
 }
 
-.onSaleTShirt {
+.shirtCat {
   max-height: 400px;
   min-width: auto;
   /* max-width: 100%; */
@@ -41,7 +42,7 @@
 
 .pug {
   max-height: 400px;
-  max-width: 100%;
+  min-width: none;
   margin-left: 160px;
   margin-right: 100px;
 }
